@@ -1,7 +1,8 @@
 ﻿@page
+
+@model IndexModel
+
 @using System.Runtime.InteropServices
-@using System.IO
-@using System.Diagnostics
 
 @{
     Layout = null;
@@ -15,7 +16,6 @@
     const long Gibi = Mebi * 1024;
     GCMemoryInfo gcInfo = GC.GetGCMemoryInfo();
     string totalAvailableMemory = GetInBestUnit(gcInfo.TotalAvailableMemoryBytes);
-
 
 }
 @{
@@ -111,9 +111,24 @@
                         </td>
                     </tr>
                 </table>
+
+
+            </div>
+            <div class="d-flex justify-content-center mb-3">
+                @if (Model.RedisEnabled)
+                {
+
+                    <form method="post">
+                        <button class="btn btn-primary me-2">Click Me!</button>
+                    </form>
+                    <span>Last Clicked: @Model.LastClickedTime</span>
+
+                }
             </div>
         </main>
     </div>
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
