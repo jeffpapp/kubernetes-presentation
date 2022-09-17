@@ -3,6 +3,18 @@ kind: Namespace
 metadata:
   name: kubernetes-presentation
 ---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubernetes-presentation-dotnet
+spec:
+  containers:
+    - name: kubernetes-presentation-dotnet
+      image: kubernetes-presentation-dotnet:latest
+      imagePullPolicy: Always
+      ports:
+        - containerPort: 80
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -22,7 +34,7 @@ spec:
     spec:
       containers:
         - name: kubernetes-presentation-dotnet
-          image: squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:latest
+          image: squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:1.0.0
           imagePullPolicy: Always
           env:
             - name: Redis__Enabled
