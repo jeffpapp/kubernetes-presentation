@@ -17,6 +17,8 @@
     - `docker run -it --rm kubernetes-presentation-dotnet:latest`
     - `docker run -it --rm -p 3200:80 kubernetes-presentation-dotnet:latest`
     - `docker run -d --rm -p 3200:80 --name kubernetes-presentation-dotnet kubernetes-presentation-dotnet:latest`
+    - `docker tag kubernetes-presentation-dotnet:latest squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:1.0.0`
+    - `docker push squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:1.0.0`
   - Navigate to http://localhost:3200/
   - Run `docker stop kubernetes-presentation-dotnet` to stop the container
 - Build and Run the Node Docker image

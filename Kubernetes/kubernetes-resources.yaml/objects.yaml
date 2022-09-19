@@ -11,7 +11,7 @@ metadata:
 spec:
   containers:
     - name: kubernetes-presentation-dotnet
-      image: kubernetes-presentation-dotnet:latest
+      image: squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:1.0.0
       imagePullPolicy: Always
       ports:
         - containerPort: 80

@@ -4,6 +4,7 @@ using StackExchange.Redis;
 
 namespace DotNetApp.Pages;
 
+[IgnoreAntiforgeryToken]
 public class IndexModel : PageModel
 {
     private readonly IConfiguration configuration;
