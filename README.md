@@ -18,8 +18,6 @@
     - https://chocolatey.org/install
   - .NET 6 SDK
     - https://dotnet.microsoft.com/en-us/download
-  - Node LTS
-    - https://nodejs.org/en/download/
 - Docker Desktop
   - https://docs.docker.com/desktop/install/windows-install/
     - Make sure to check to box for WSL2 during installation
@@ -32,7 +30,5 @@
     - `choco install kubectx`
   - kubens
     - `choco install kubens`
-
-## Agenda
-
-- [Containers and Docker](Docker/README.md)
+  - octant
+    - `choco install octant`
