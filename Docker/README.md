@@ -21,9 +21,3 @@
     - `docker push squareikubernetespresentation.azurecr.io/kubernetes-presentation-dotnet:1.0.0`
   - Navigate to http://localhost:3200/
   - Run `docker stop kubernetes-presentation-dotnet` to stop the container
-- Build and Run the Node Docker image
-  - In the `NodeApp` folder run:
-    - `docker build -t kubernetes-presentation-node .`
-    - `docker run -d --rm -p 3300:80 --name kubernetes-presentation-node kubernetes-presentation-node`
-  - Navigate to http://localhost:3300/
-  - Run `docker stop kubernetes-presentation-node` to stop the container
