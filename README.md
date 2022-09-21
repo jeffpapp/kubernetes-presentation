@@ -31,4 +31,5 @@
   - kubens
     - `choco install kubens`
   - octant
+    - https://octant.dev/
     - `choco install octant`
